@@ -35,19 +35,21 @@ api-testing-portfolio
 
 ## API Under Test
 
-Fake Store API
+JSONPlaceholder
 
-https://fakestoreapi.com
+https://jsonplaceholder.typicode.com
+
+This project uses JSONPlaceholder as a public REST API for learning and demonstrating API testing concepts.
 
 ## Planned Test Scenarios
 
-### Product API
+### Posts API
 
-- GET Product
-- GET All Products
-- POST Product
-- PUT Product
-- DELETE Product
+- GET Post
+- GET All Posts
+- POST Create Post
+- PUT Update Post
+- DELETE Post
 
 ## Learning Goals
 
