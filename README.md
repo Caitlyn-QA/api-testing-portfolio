@@ -26,11 +26,11 @@ api-testing-portfolio
 
 ## Tools
 
-Postman
-REST API
-JSON
-Git
-GitHub
+- Postman
+- REST API
+- JSON
+- Git
+- GitHub
 
 ## API Under Test
 
@@ -40,18 +40,24 @@ https://jsonplaceholder.typicode.com
 
 JSONPlaceholder is a public REST API used for learning and demonstrating API testing concepts.
 
-## Testing Approach
+## Testing Philosophy
 
-For each endpoint:
+This project is intentionally structured around business goals and risks rather than only API requests and technical assertions.
 
-1. Define the business goal
-2. Identify risks
-3. Design validations
-4. Implement automated tests
+Instead of validating data solely because it exists, each test scenario starts with:
 
-The intention is to demonstrate practical QA thinking rather than only technical API requests.
+1. Business Goal
+2. Potential Risks
+3. Test Design
+4. Automated Validation
 
-# Implemented Test Scenarios
+This approach reflects how API testing is performed in real projects, where validations are derived from requirements and risk analysis rather than from static sample data alone.
+
+Example:
+
+Instead of only validating that a response contains 100 records, the test design considers what business requirement the endpoint is expected to fulfill and which risks should be mitigated.
+
+## Implemented Test Scenarios
 
 ## GET Post
 
@@ -94,7 +100,9 @@ Retrieve all available posts.
 - Empty response returned
 - Missing required fields
 - Invalid response structure
-- Validations
+
+### Validations
+
 - Status code is 200
 - Response contains one or more posts
 - Every post has an ID
@@ -102,7 +110,7 @@ Retrieve all available posts.
 - Every post has a non-empty title
 - Every post has content
 
-# Planned Test Scenarios
+## Planned Test Scenarios
 
 ## POST Create Post
 
@@ -115,7 +123,9 @@ Create a new post.
 - Post not created
 - Missing required fields
 - Incorrect response returned
-- Planned Validations
+
+### Planned Validations
+
 - Status code is successful
 - Created post contains submitted data
 - Response contains generated ID
@@ -131,7 +141,9 @@ Update an existing post.
 - Changes not saved
 - Wrong post updated
 - Invalid response returned
-- Planned Validations
+
+### Planned Validations
+
 - Status code is successful
 - Updated values are returned correctly
 - Post ID remains unchanged
@@ -144,15 +156,16 @@ Delete an existing post.
 
 ### Risks
 
--Post not deleted
-
+- Post not deleted
 - Incorrect response returned
 - Wrong resource affected
-- Planned Validations
+
+### Planned Validations
+
 - Status code is successful
 - Delete operation completes successfully
 
-# Portfolio Notes
+## Portfolio Notes
 
 This project focuses on demonstrating QA analysis, test design, and API validation principles.
 
